@@ -9,6 +9,8 @@ import (
 func SetupRouter() *gin.Engine {
 	r := gin.Default()
 
+	r.GET("/", controllers.IndexPage)
+
 	// Routing Group biar rapi mirip Laravel
 	v1 := r.Group("/products")
 	{
